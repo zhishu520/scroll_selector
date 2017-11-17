@@ -13,17 +13,20 @@ public:
 
     void ScrollTo(int index, float delay);
 private:
-    std::vector<cocos2d::Node*> m_nodes;
+    
     float minScale;
     float maxScale;
     float spaceDistance;
+    int currentIndex;
+    
+    std::vector<cocos2d::Node*> nodes;
 
     virtual bool init();
     void initView();
     void initListener();
     void update(float dt);
 
-    int m_iCurrentIndex;
+    
 
     CREATE_FUNC(ScrollSelector);
 };
